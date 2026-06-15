@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandhini Pothunuri | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Nandhini Pothunuri, an Engineering Student and Aspiring Full Stack Developer. Passionate about web development, programming, and software engineering.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/my_avatar.png">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main App Container -->
+  <div class="app-container">
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div class="mobile-profile">
+        <img src="assets/my_avatar.png" alt="Nandhini Pothunuri" class="mobile-avatar">
+        <div class="mobile-title">
+          <h3>Nandhini Pothunuri</h3>
+          <p>Full Stack Developer</p>
+        </div>
+      </div>
+      <button class="sidebar-toggle" aria-label="Toggle Sidebar" id="sidebarToggle">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </header>
+
+    <!-- Sidebar (Sticky on Desktop, Collapsible on Mobile) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-info">
+        <!-- Profile Image -->
+        <div class="avatar-box">
+          <img src="assets/my_avatar.png" alt="Nandhini Pothunuri" class="profile-avatar">
+          <div class="avatar-glow"></div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="profile-details">
+          <h1 class="name">Nandhini Pothunuri</h1>
+          <p class="role">Full Stack Developer</p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="separator">
+
+      <!-- Contact Info Section -->
+      <ul class="contact-list">
+        <li class="contact-item">
+          <div class="icon-box">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:nandini020905@gmail.com" class="contact-link">nandini020905@gmail.com</a>
+          </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <a href="tel:+919550088342" class="contact-link">+91 9550088342</a>
+          </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <i class="fa-regular fa-calendar"></i>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Birthday</p>
+            <time datetime="2005-09-02">September 02, 2005</time>
+          </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Metpally, Telangana, India</address>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Divider -->
+      <hr class="separator">
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/nandhini0209" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nandhini_pothunuri" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+
+      <!-- Sticky Glass Navigation Navbar -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="about">About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="projects">Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="certifications">Certifications</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sections Wrapper -->
+      <div class="sections-container">
+
+        <!-- ABOUT ME SECTION -->
+        <section class="portfolio-section active" id="about">
+          <header class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-underline"></div>
+          </header>
+
+          <div class="about-text">
+            <p>
+              I am an Engineering student passionate about Full Stack Web Development, programming, and building creative technical projects. I enjoy learning new technologies and improving my coding skills through real-world practice.
+            </p>
+            <p>
+              I have knowledge of HTML, CSS, JavaScript, Python, Java, Spring Boot, MySQL, C, and C++. I have participated in Smart India Hackathon, completed a ServiceNow Virtual Internship, and developed multiple academic and personal projects.
+            </p>
+            <p>
+              Currently, I am focused on enhancing my full-stack development skills and creating impactful digital solutions while preparing for software engineering opportunities.
+            </p>
+          </div>
+
+          <!-- What I'm Doing -->
+          <div class="services-container">
+            <h3 class="subsection-title">What I'm Doing</h3>
+            <div class="services-grid">
+              
+              <!-- Card 1 -->
+              <div class="service-card">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="service-title">Frontend Development</h4>
+                  <p class="service-description">
+                    Building responsive and interactive websites using HTML, CSS, JavaScript, and React.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="service-card">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="service-title">Backend Development</h4>
+                  <p class="service-description">
+                    Learning Node.js and Express.js and completed few badge courses in MongoDB.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="service-card">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="service-title">Database Management</h4>
+                  <p class="service-description">
+                    Designing and managing relational databases using MySQL.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="service-card">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="service-title">Continuous Learning</h4>
+                  <p class="service-description">
+                    Actively learning modern technologies and improving problem-solving skills through projects and coding practice.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- RESUME SECTION -->
+        <section class="portfolio-section" id="resume">
+          <header class="section-header">
+            <h2 class="section-title">Resume</h2>
+            <div class="title-underline"></div>
+          </header>
+
+          <div class="resume-grid">
+            
+            <!-- Left Column: Timeline -->
+            <div class="resume-timeline-container">
+              
+              <!-- Education Timeline -->
+              <div class="timeline-group">
+                <div class="timeline-title-wrapper">
+                  <div class="timeline-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <h3 class="timeline-header">Education</h3>
+                </div>
+                
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="timeline-item-title">B.Tech in Computer Science and Engineering</h4>
+                    <span class="timeline-item-date">2024 — 2028</span>
+                    <p class="timeline-item-desc">
+                      Currently pursuing a Bachelor of Technology in Computer Science and Engineering with a focus on software development, web technologies, databases, data structures, and problem-solving.
+                    </p>
+                  </li>
+
+                  <li class="timeline-item">
+                    <h4 class="timeline-item-title">Intermediate (MPC)</h4>
+                    <span class="timeline-item-date">2022 — 2024</span>
+                    <p class="timeline-item-desc">
+                      Completed Intermediate education with Mathematics, Physics, and Chemistry.
+                    </p>
+                  </li>
+
+                  <li class="timeline-item">
+                    <h4 class="timeline-item-title">Secondary School Education</h4>
+                    <span class="timeline-item-date">2022</span>
+                    <p class="timeline-item-desc">
+                      Successfully completed secondary education with a strong academic foundation.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Experience Timeline -->
+              <div class="timeline-group">
+                <div class="timeline-title-wrapper">
+                  <div class="timeline-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <h3 class="timeline-header">Experience</h3>
+                </div>
+
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="timeline-item-title">ServiceNow Virtual Internship</h4>
+                    <span class="timeline-item-date">2025</span>
+                    <p class="timeline-item-desc">
+                      Completed a virtual internship focused on ServiceNow platform fundamentals, workflow automation, and enterprise application concepts.
+                    </p>
+                  </li>
+
+                  <li class="timeline-item">
+                    <h4 class="timeline-item-title">Smart India Hackathon Participant</h4>
+                    <span class="timeline-item-date">2025</span>
+                    <p class="timeline-item-desc">
+                      Participated in Smart India Hackathon and contributed to developing an innovative technology solution addressing real-world challenges.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Skills & Interactive Bars -->
+            <div class="resume-skills-container">
+              <h3 class="subsection-title">My Skills</h3>
+              
+              <div class="skills-card">
+                <ul class="skills-list">
+                  
+                  <!-- Skill 1 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">HTML & CSS</h5>
+                      <data value="85" class="skill-value">85%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="85%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 2 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">Java</h5>
+                      <data value="80" class="skill-value">80%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="80%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 3 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">Python</h5>
+                      <data value="80" class="skill-value">80%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="80%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 4 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">Problem Solving</h5>
+                      <data value="80" class="skill-value">80%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="80%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 5 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">MySQL</h5>
+                      <data value="75" class="skill-value">75%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="75%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 6 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">JavaScript</h5>
+                      <data value="75" class="skill-value">75%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="75%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 7 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">Git & GitHub</h5>
+                      <data value="75" class="skill-value">75%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="75%"></div>
+                    </div>
+                  </li>
+
+                  <!-- Skill 8 -->
+                  <li class="skill-item">
+                    <div class="skill-title-wrapper">
+                      <h5 class="skill-name">Spring Boot</h5>
+                      <data value="70" class="skill-value">70%</data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-bar" data-progress="70%"></div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="portfolio-section" id="projects">
+          <header class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <div class="title-underline"></div>
+          </header>
+
+          <div class="projects-grid">
+            
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project-heart.png" alt="Heart Disease Prediction System" class="project-img">
+                <div class="project-hover-overlay">
+                  <a href="https://github.com/nandhini0209" target="_blank" rel="noopener noreferrer" class="project-hover-btn" aria-label="View Code">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Heart Disease Prediction System</h3>
+                <p class="project-description">
+                  A machine learning-based application that predicts the likelihood of heart disease using patient health parameters.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">Scikit-learn</span>
+                </div>
+                <a href="https://github.com/nandhini0209" target="_blank" rel="noopener noreferrer" class="project-btn">
+                  <i class="fa-brands fa-github"></i> View GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project-food.png" alt="Food Connect App" class="project-img">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Food Connect App (Smart India Hackathon)</h3>
+                <p class="project-description">
+                  Developed a platform that connects food providers with people in need to reduce food wastage and improve food distribution.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Database</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+              <div class="project-img-wrapper">
+                <img src="assets/project-portfolio.png" alt="Personal Portfolio Website" class="project-img">
+                <div class="project-hover-overlay">
+                  <a href="https://github.com/nandhini0209" target="_blank" rel="noopener noreferrer" class="project-hover-btn" aria-label="View Code">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <p class="project-description">
+                  A modern, responsive portfolio website showcasing my engineering background, developer skills, and academic projects.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/nandhini0209" target="_blank" rel="noopener noreferrer" class="project-btn">
+                  <i class="fa-brands fa-github"></i> View GitHub
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section class="portfolio-section" id="certifications">
+          <header class="section-header">
+            <h2 class="section-title">Certifications</h2>
+            <div class="title-underline"></div>
+          </header>
+
+          <div class="certs-grid">
+            
+            <!-- Cert Card 1 -->
+            <div class="cert-card">
+              <div class="cert-icon-wrapper">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="cert-details">
+                <h3 class="cert-name">ServiceNow Virtual Internship Certificate</h3>
+                <p class="cert-org">ServiceNow</p>
+                <time class="cert-date">2025</time>
+                <div class="cert-actions">
+                  <button class="cert-btn view-cert-btn" data-cert-src="assets/cert-servicenow.png" data-cert-title="ServiceNow Virtual Internship Certificate">
+                    <i class="fa-regular fa-eye"></i> View Certificate
+                  </button>
+                  <a href="assets/cert-servicenow.png" download="ServiceNow_Virtual_Internship_Nandhini.png" class="cert-btn dl-cert-btn">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cert Card 2 -->
+            <div class="cert-card">
+              <div class="cert-icon-wrapper">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="cert-details">
+                <h3 class="cert-name">Smart India Hackathon Participation Certificate</h3>
+                <p class="cert-org">Smart India Hackathon</p>
+                <time class="cert-date">2025</time>
+                <div class="cert-actions">
+                  <button class="cert-btn view-cert-btn" data-cert-src="assets/cert-sih.png" data-cert-title="Smart India Hackathon Participation Certificate">
+                    <i class="fa-regular fa-eye"></i> View Certificate
+                  </button>
+                  <a href="assets/cert-sih.png" download="SIH_Participation_Certificate_Nandhini.png" class="cert-btn dl-cert-btn">
+                    <i class="fa-solid fa-download"></i> Download
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="portfolio-section" id="contact">
+          <header class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <div class="title-underline"></div>
+          </header>
+
+          <!-- Contact Layout -->
+          <div class="contact-grid">
+            
+            <!-- Contact Details & Map -->
+            <div class="contact-info-panel">
+              <h3 class="subsection-title">Get In Touch</h3>
+              
+              <div class="contact-cards-container">
+                <div class="contact-detail-card">
+                  <div class="contact-detail-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <a href="mailto:nandini020905@gmail.com">nandini020905@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-card">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4>Phone</h4>
+                    <a href="tel:+919550088342">+91 9550088342</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-card">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h4>Location</h4>
+                    <p>Metpally, Telangana, India</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map Container -->
+              <div class="map-container">
+                <!-- Grayscale & inverted dark styled Google Map -->
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15124.975496464875!2d78.57757969186675!3d18.764491951554907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcd7f0c11571217%3A0xe54e3d36862eb99b!2sMetpally%2C%20Telangana%20505325%2C%20India!5e0!3m2!1sen!2sus!4v1718460000000!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Google Map showing Metpally, Telangana, India"
+                  class="styled-map">
+                </iframe>
+              </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-panel">
+              <h3 class="subsection-title">Contact Form</h3>
+              
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="example@domain.com" required>
+                  <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea id="message" name="message" class="form-input text-area" placeholder="Write your message here..." required></textarea>
+                  <span class="error-message" id="messageError">Message cannot be empty.</span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                  <span>Send Message</span>
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </form>
+
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Main Footer (Optional but professional) -->
+      <footer class="footer">
+        <p>&copy; 2026 Nandhini Pothunuri. All Rights Reserved.</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Glass Lightbox Modal for Certificate Viewer -->
+  <div class="modal" id="certModal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalClose" aria-label="Close Preview">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <h3 id="modalTitle">Certificate</h3>
+      </div>
+      <div class="modal-content">
+        <img id="modalImg" src="" alt="Certificate Preview">
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Toast Notification -->
+  <div class="toast" id="successToast">
+    <div class="toast-content">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div class="toast-message">
+        <h4>Success!</h4>
+        <p>Your message has been sent successfully.</p>
+      </div>
+    </div>
+    <button class="toast-close" id="toastClose">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
