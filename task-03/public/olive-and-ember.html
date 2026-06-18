@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Olive & Ember — A West Village Trattoria</title>
+<meta name="description" content="A neighborhood trattoria in the West Village dedicated to wood-fired hearth cooking, hand-rolled pasta, and slow evenings. Reservations open nightly." />
+<meta property="og:title" content="Olive & Ember — A West Village Trattoria" />
+<meta property="og:description" content="Wood-fired hearth cooking and hand-rolled pasta in the West Village." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#fbf8f1; --cream:#f3ede0; --ink:#1c1714; --muted:#6b645c;
+    --ember:#b8552c; --border:rgba(28,23,20,.1);
+    --display:'Cormorant Garamond',serif;
+    --sans:'Inter',sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(184,85,44,.2)}
+
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  .mono{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+  .italic{font-style:italic}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:16px 48px;background:rgba(251,248,241,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  nav .left{display:flex;align-items:center;gap:48px}
+  nav .brand{font-family:var(--display);font-size:24px;letter-spacing:-.01em}
+  nav .links{display:none;gap:32px}
+  nav .links a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:color .2s}
+  nav .links a:hover{color:var(--ember)}
+  nav .cta{padding:10px 20px;background:var(--ink);color:var(--bg);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;transition:background .2s}
+  nav .cta:hover{background:var(--ember)}
+  @media(min-width:768px){nav .links{display:flex}}
+
+  /* Hero */
+  header.hero{position:relative;height:90vh;min-height:600px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px;overflow:hidden;text-align:center}
+  header.hero .bg{position:absolute;inset:0;z-index:0}
+  header.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.85;transform:scale(1.05)}
+  header.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(251,248,241,.4),rgba(251,248,241,.1) 40%,var(--bg))}
+  header.hero .inner{position:relative;z-index:1;max-width:900px;animation:reveal 1s cubic-bezier(.19,1,.22,1) both}
+  header.hero .eyebrow{color:var(--ember);margin-bottom:24px;display:block}
+  header.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(56px,10vw,128px);line-height:.9;margin-bottom:32px;letter-spacing:-.01em}
+  header.hero p{max-width:440px;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.7}
+  header.hero .scroll{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);width:1px;height:48px;background:rgba(28,23,20,.2);animation:bounce 2s infinite}
+  @keyframes reveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
+
+  /* Story */
+  section.story{padding:128px 24px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  section.story img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  section.story .eyebrow{color:var(--muted);margin-bottom:16px;display:block}
+  section.story h2{font-family:var(--display);font-size:clamp(36px,5vw,60px);line-height:1.1;margin-bottom:32px}
+  section.story p{color:var(--muted);max-width:520px;margin-bottom:24px;line-height:1.75}
+  section.story .hours{margin-top:48px;padding-top:48px;border-top:1px solid var(--border)}
+  section.story .hours .time{font-family:var(--display);font-size:24px;margin-top:8px}
+  @media(min-width:768px){
+    section.story{grid-template-columns:5fr 7fr;gap:64px}
+  }
+
+  /* Menu */
+  section.menu{background:var(--ink);color:var(--bg);padding:128px 24px}
+  section.menu .head{text-align:center;margin-bottom:96px}
+  section.menu .head h2{font-family:var(--display);font-style:italic;font-size:clamp(48px,7vw,96px);margin-bottom:16px}
+  section.menu .head p{opacity:.6}
+  section.menu .list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:48px}
+  section.menu .item{display:flex;flex-direction:column;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(251,248,241,.1);padding-bottom:32px;transition:border-color .3s}
+  section.menu .item:hover{border-color:var(--ember)}
+  section.menu .item h3{font-family:var(--display);font-size:28px;margin-bottom:8px;font-weight:500}
+  section.menu .item .desc{font-size:13px;font-style:italic;color:rgba(251,248,241,.6);max-width:520px}
+  section.menu .item .price{font-family:var(--mono);font-size:14px}
+  section.menu .row{display:flex;align-items:flex-end;gap:16px}
+  section.menu .dots{flex:1;border-bottom:1px dotted rgba(251,248,241,.2);min-width:100px;display:none}
+  section.menu .cta-wrap{margin-top:80px;text-align:center}
+  section.menu .ghost{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(251,248,241,.2);padding:16px 32px;background:transparent;color:var(--bg);cursor:pointer;transition:all .2s}
+  section.menu .ghost:hover{background:var(--bg);color:var(--ink)}
+  @media(min-width:768px){
+    section.menu .item{flex-direction:row;align-items:flex-end}
+    section.menu .dots{display:block}
+  }
+
+  /* Gallery */
+  section.gallery{padding:128px 24px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  section.gallery .cell{aspect-ratio:1/1;overflow:hidden}
+  section.gallery .cell img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+  section.gallery .cell:hover img{transform:scale(1.05)}
+  @media(min-width:768px){
+    section.gallery{grid-template-columns:repeat(4,1fr)}
+    section.gallery .cell{aspect-ratio:3/4}
+    section.gallery .cell:nth-child(even){margin-top:48px}
+  }
+
+  /* Reserve / Footer */
+  footer.reserve{background:var(--cream);border-top:1px solid var(--border);padding:96px 24px}
+  footer.reserve .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:64px}
+  footer.reserve h2{font-family:var(--display);font-size:clamp(40px,6vw,72px);margin-bottom:48px}
+  footer.reserve .field{margin-bottom:32px}
+  footer.reserve .field label{display:block;color:var(--muted);margin-bottom:8px}
+  footer.reserve .field p{font-size:20px;line-height:1.5}
+  footer.reserve .hours-grid{display:grid;grid-template-columns:auto 1fr;gap:8px 32px;max-width:360px;font-size:15px}
+  footer.reserve .hours-grid .v{color:var(--muted)}
+  footer.reserve form{background:var(--bg);padding:48px;border:1px solid var(--border);height:fit-content}
+  footer.reserve form .row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  footer.reserve form input,footer.reserve form select{width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);padding:8px 0;font-size:18px;font-family:inherit;color:inherit;outline:none;transition:border-color .2s}
+  footer.reserve form input:focus,footer.reserve form select:focus{border-color:var(--ember)}
+  footer.reserve form button{width:100%;background:var(--ink);color:var(--bg);padding:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border:none;cursor:pointer;font-family:inherit;margin-top:24px;transition:background .2s}
+  footer.reserve form button:hover{background:var(--ember)}
+  footer.reserve .credits{max-width:1200px;margin:80px auto 0;padding-top:32px;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:16px;color:var(--muted)}
+  @media(min-width:768px){
+    footer.reserve .grid{grid-template-columns:1fr 1fr;gap:96px}
+    footer.reserve .credits{flex-direction:row;justify-content:space-between}
+  }
+
+  .reveal-on-scroll{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.19,1,.22,1),transform .9s cubic-bezier(.19,1,.22,1)}
+  .reveal-on-scroll.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="left">
+    <a href="#top" class="brand">Olive &amp; Ember</a>
+    <div class="links">
+      <a href="#menu">The Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </div>
+  <a href="#reserve" class="cta">Reservations</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg">
+    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1920&q=80" alt="Hand-rolled pasta on a marble counter" />
+  </div>
+  <div class="inner">
+    <span class="mono eyebrow">West Village • NYC</span>
+    <h1>Slow food for <span class="italic">quiet</span> nights.</h1>
+    <p>A neighborhood trattoria dedicated to the ritual of wood-fired hearth cooking and hand-rolled pasta.</p>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<section class="story" id="story">
+  <div class="reveal-on-scroll">
+    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1080&q=80" alt="Chef Marco Rossi" loading="lazy" />
+  </div>
+  <div class="reveal-on-scroll">
+    <span class="mono eyebrow">01 / Origins</span>
+    <h2>From the ember,<br/><span class="italic">the flavor blooms.</span></h2>
+    <p>Founded by Marco Rossi, Olive &amp; Ember is a love letter to the rustic kitchens of Emilia-Romagna. We believe in the friction of the stone, the heat of the oak, and the patience of the ferment.</p>
+    <p>Our ingredients are sourced from small-scale growers who respect the seasons as much as we do. No shortcuts, just the honest alchemy of flour, water, and fire.</p>
+    <div class="hours">
+      <div class="mono">Open Nightly</div>
+      <div class="time">5:30 PM — Late</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="head reveal-on-scroll">
+    <h2>Signature Plates</h2>
+    <p class="mono">Selected highlights from tonight's menu</p>
+  </div>
+  <div class="list" id="menu-list"></div>
+  <div class="cta-wrap"><button class="ghost" type="button">View Full Menu</button></div>
+</section>
+
+<section class="gallery" id="gallery"></section>
+
+<footer class="reserve" id="reserve">
+  <div class="grid">
+    <div class="reveal-on-scroll">
+      <h2>Join us <span class="italic">tonight.</span></h2>
+      <div class="field">
+        <label class="mono">Location</label>
+        <p>242 Bleecker Street,<br/>New York, NY 10014</p>
+      </div>
+      <div class="field">
+        <label class="mono">Contact</label>
+        <p>+1 (212) 555-0198<br/>ciao@oliveandember.com</p>
+      </div>
+      <div class="field">
+        <label class="mono">Hours</label>
+        <div class="hours-grid">
+          <span>Tue – Thu</span><span class="v">5:30pm – 10pm</span>
+          <span>Fri – Sat</span><span class="v">5:30pm – 11pm</span>
+          <span>Sunday</span><span class="v">5pm – 9pm</span>
+          <span>Monday</span><span class="v">Closed</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="reserve-form" class="reveal-on-scroll">
+      <div class="field">
+        <label class="mono">Guest Name</label>
+        <input type="text" required />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label class="mono">Party Size</label>
+          <select>
+            <option>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5+ Guests</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="mono">Time</label>
+          <input type="time" value="19:30" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="mono">Email</label>
+        <input type="email" required />
+      </div>
+      <button type="submit">Request a Table</button>
+    </form>
+  </div>
+
+  <div class="credits mono">
+    <p>© 2026 Olive &amp; Ember Trattoria</p>
+    <p>Photography by Studio Terra</p>
+    <p>Made in New York</p>
+  </div>
+</footer>
+
+<script>
+  // Menu data
+  const menu = [
+    {n:"Cacio e Pepe al Tartufo", d:"Hand-cut tonnarelli, Pecorino Romano, toasted black pepper, shaved seasonal truffle.", p:"$32"},
+    {n:"Wood-Fired Branzino", d:"Whole Mediterranean sea bass, blistered cherry tomatoes, lemon-thyme salsa verde.", p:"$46"},
+    {n:"Burrata & Charred Peach", d:"Local burrata, wood-grilled stone fruit, 25-year aged balsamic, micro-basil.", p:"$24"},
+    {n:"Wild Boar Pappardelle", d:"12-hour ragù, hand-cut ribbons, 36-month aged Parmigiano-Reggiano.", p:"$34"}
+  ];
+  document.getElementById('menu-list').innerHTML = menu.map(i => `
+    <div class="item reveal-on-scroll">
+      <div>
+        <h3>${i.n}</h3>
+        <p class="desc">${i.d}</p>
+      </div>
+      <div class="row">
+        <div class="dots"></div>
+        <span class="price">${i.p}</span>
+      </div>
+    </div>`).join('');
+
+  // Gallery data
+  const gallery = [
+    {src:"https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80", alt:"Red wine"},
+    {src:"https://images.unsplash.com/photo-1571066811602-716837d681de?w=800&q=80", alt:"Wood-fired pizza"},
+    {src:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", alt:"Restaurant interior"},
+    {src:"https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&q=80", alt:"Olive oil with rosemary"}
+  ];
+  document.getElementById('gallery').innerHTML = gallery.map(g => `
+    <div class="cell reveal-on-scroll"><img src="${g.src}" alt="${g.alt}" loading="lazy"/></div>`).join('');
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => io.observe(el));
+
+  // Reservation form
+  document.getElementById('reserve-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert("Grazie! We'll confirm your reservation by email shortly.");
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
